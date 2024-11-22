@@ -49,7 +49,3 @@ function generateBotResponse(userInput) {
         alert("Please enter a search query.");
     }
 });
-
-        return "Sorry, I didn't quite get that. Could you try asking something else?";
-    }
-}
