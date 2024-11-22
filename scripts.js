@@ -36,9 +36,9 @@ function generateBotResponse(userInput) {
         return "I'm here to help. Ask me anything!";
     } else if (lowerInput.includes("bye")) {
         return "Goodbye! Have a great day!";
-    } else if (searchQuery) {
+    } else if (lowerInput) {
         // Create the Google search URL
-        const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+        const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(lowerInput)}`;
 
         // Open the Google search results in a new tab
         window.open(googleSearchUrl, "_blank");
