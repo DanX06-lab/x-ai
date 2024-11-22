@@ -36,7 +36,20 @@ function generateBotResponse(userInput) {
         return "I'm here to help. Ask me anything!";
     } else if (lowerInput.includes("bye")) {
         return "Goodbye! Have a great day!";
+    } else if (searchQuery) {
+        // Create the Google search URL
+        const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+
+        // Open the Google search results in a new tab
+        window.open(googleSearchUrl, "_blank");
+
+        // Optionally, clear the input field
+        document.getElementById("search-input").value = '';
     } else {
+        alert("Please enter a search query.");
+    }
+});
+
         return "Sorry, I didn't quite get that. Could you try asking something else?";
     }
 }
